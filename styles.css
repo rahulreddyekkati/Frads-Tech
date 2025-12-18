@@ -2579,6 +2579,34 @@ input:checked+.toggle-slider:before {
         display: flex;
     }
 
+    /* Hide 3D floating panels on mobile */
+    .hero-visual-3d {
+        display: none !important;
+    }
+
+    /* Make hero content single column on mobile */
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+        min-height: auto;
+        padding: var(--spacing-xl) 0;
+    }
+
+    .hero {
+        min-height: auto;
+        padding-top: 100px;
+        padding-bottom: var(--spacing-2xl);
+    }
+
+    .hero-text {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .hero-subtitle {
+        max-width: 100%;
+    }
+
     .hero-title {
         font-size: var(--font-size-3xl);
     }
@@ -2627,10 +2655,12 @@ input:checked+.toggle-slider:before {
 
     .hero-cta {
         flex-direction: column;
+        align-items: center;
     }
 
     .hero-cta .btn {
         width: 100%;
+        max-width: 300px;
     }
 }
 
